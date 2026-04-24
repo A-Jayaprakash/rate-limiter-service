@@ -1,0 +1,33 @@
+{
+  "name": "rate-limiter",
+  "version": "1.0.0",
+  "description": "Production-grade Redis-backed distributed rate limiter for Node.js/Express",
+  "main": "src/middleware/rateLimiter.js",
+  "scripts": {
+    "start": "node demo-api/server.js",
+    "dev": "nodemon demo-api/server.js",
+    "test": "jest",
+    "test:unit": "jest --selectProjects unit",
+    "test:integration": "jest --selectProjects integration",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/ config/ demo-api/ --ext .js",
+    "lint:fix": "eslint src/ config/ demo-api/ --ext .js --fix"
+  },
+  "keywords": ["rate-limiter","redis","express","middleware","token-bucket"],
+  "author": "Jayaprakash A",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "ioredis": "^5.3.2",
+    "prom-client": "^15.1.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^6.3.4",
+    "ioredis-mock": "^8.9.0",
+    "nodemon": "^3.0.2",
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "prettier": "^3.2.5"
+  }
+}
